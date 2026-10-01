@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day1 Pythonの基礎①</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.min.js"></script>
+</head>
+
+<body for="html-export" data-header-base-path="../">
+    <div id="pagetop"></div>
+    <div class="crossnote markdown-preview">
+
+        <h1 id="maintitle">day1 Pythonの基礎①</h1>
+
+        <h1 id="講師アシスタント紹介">講師・アシスタント紹介</h1>
+
+        <h2 id="講師吉田-力リッキー">講師:吉田 力(リッキー)</h2>
+        <div style="display: flex; align-items: center; gap: 8px;"><img src="img/ricky_icon.png" alt="リッキーのアイコン" style="width:80px; height:80px; border-radius: 50%">
+            8ackathon(ハッカソン)代表。プログラミング教室「アクセルキャンプ」代表。サルビアの向かい、雑貨屋HARENOHIのとなりのようわからんあそこでプログラミング教室とかやってる人。ゲームサークルとかマイクラ部とかやってるので、見かけたら声かけてね。</div><br>
+
+        <h2 id="アシスタント①-大垣-由騎ガッキー">アシスタント① 大垣 由騎　(ガッキー)</h2>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <img src="img/gakki.png" alt="ガッキーのアイコン" style="width:80px; height:80px; border-radius: 50%">
+            中国語ペラペラの謎の関西人、ガッキーです。
+            大更らへんに生息してます。
+            去年まで皆さんと同じようにプログラミング初心者だったので、難しい！とかわからない！とかめちゃくちゃ気持ちわかります！
+            プログラミングだけじゃなくて関西の事も中国の事も何でも聞いてね！
+        </div><br>
+
+        <h2 id="アシスタント②-沖野-省吾オッキー">アシスタント② 沖野 省吾  (オッキー)</h2>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <img src="img/okki.png" alt="オッキーのアイコン" style="width:80px; height:80px; border-radius: 50%">
+            去年までピチピチの大学生だった“おっきー”です。
+            みんなと一緒に楽しくゲームを作っていけたら嬉しいです！
+            わからないことがあったら気軽に声かけてね！
+        </div><br>
+        <h2 id="アシスタント③-田口-怜央グッチー">アシスタント③ 田口 怜央  (グッチー)</h2>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <img src="img/gucchi.png" alt="グッチーのアイコン" style="width:80px; height:80px; border-radius: 50%">
+            高校生の時はスーパーで割引シール貼りのバイトしてました!
+            つい最近の気がしてたんですが気づけば31歳のグッチーです!
+            スマブラやってます!いつでも勝負受けて立つからね!ゲームづくり何でも聞いてね!
+        </div><br>
+
+        <h1 id="八幡平市起業志民プロジェクトスパルタキャンプ事業紹介">八幡平市起業志民プロジェクト「スパルタキャンプ」事業紹介</h1>
+        <p>黒幕　八幡平市役所のM・Nさんからのメッセージ</p>
+        <blockquote>
+            <p>皆さん「起業」や「プログラミング」に興味ありますか？<br>
+                難しそう、自分には関係ないと思っていませんか。実は、AI時代の幕が開けようとしている今こそ、新しい挑戦を始めるチャンスです！<br>
+                今回皆さんに受けていただく「スパルタキャンプ・ライト」は、日本のどんなスーパー進学校にもない、特別授業です。世界中から応募が殺到し、国や大企業からも注目を集めまくる、 <strong>八幡平市主催の本格プログラミング合宿「スパルタキャンプ」</strong> のエッセンスをギュッと濃縮し、皆さんにプログラミングと起業の面白さを体験してもらいます。講師はアメリカ生まれで、ハワイに住んでいたのにキャンプを受講して「ハワイより八幡平の方が面白そう」というユニークな理由で、市での起業や地域活動に飛び込んだスゴイ人！<br>
+                今回の授業を終える頃には「プログラミングって難しいだろ？」「起業なんて天才のやるものでしょ？」そんな誤解を吹き飛ばし、「自分にもできるかも！」と感じられているはず。仲間と一緒にゼロから何かを生み出すワクワクを、ぜひ体感してください。高校生活最後の年、このスパルタキャンプ・ライトがあなたの新しい一歩を踏み出すきっかけになるかも。<br>
+                <strong>さぁ、未来をはじめよう。</strong></p>
+        </blockquote>
+        <p><a href="https://www.kigyoshimin.com/">八幡平市　起業志民プロジェクト</a></p>
+
+        <h1 id="プログラミングについて">プログラミングについて</h1>
+
+        <h2 id="プログラミング--翻訳">プログラミング = 翻訳</h2>
+        <p>プログラミングは、コンピュータと人間がコミュニケーションを取るための手法のこと。<br>
+            人間同士でコミュニケーションを取る場合、言語や文字を用いて行うけど、それと同じで、人間がコンピュータにやってもらいたいことを伝えたりするときに『言語』を使う。<br>
+            でもちょっと困ったことに、コンピュータは基本的に『機械語(=マシン語)』という、数字の0と1(2進数)だけで表される言語でのみ、物事を理解するしくみになってる。流石に人間がその機械語で指示を出したりするのは大変だから、別の方法が必要になってくる。<br>
+            そこで活躍するのが『プログラミング言語』というやつ。コンピュータに指示をするときに、より人間にわかりやすく指示できるように設計されたプログラミング言語で指示を書き込んでいく。そうするとコンピュータは、プログラミング言語を機械語に変換(翻訳)する作業をはじめる。(翻訳のやり方には、全部まとめて翻訳する「コンパイル」と、1行ずつ翻訳しながら実行する「インタプリタ」があって、Pythonはインタプリタのほう。)その結果コンピュータに理解できる形式になっていれば指示を実行して、もしそうでなければ警告(エラー)を出すなどして間違いを指摘したりしてくれるわけ。</p>
+        <p>プログラミング言語は、世の中のいろんなところで使われています。<br>
+            ・コントローラーの右ボタンを押したらキャラを右に動かすという指示<br>
+            ・実際の室温にあわせてエアコンの温度調節をする指示<br>
+            ・スマホを見ただけで顔認証でログインする機能<br>
+            これら全てにプログラミング言語が使われています。</p>
+
+        <h2 id="pythonパイソンとは">Python(パイソン)とは</h2>
+        <p>プログラミング言語にもいろんな種類があり、それぞれ得意な分野などがある。<br>
+            それぞれ似てるところもあれば違うところもあって、イメージで言えば日本語の方言みたいな感じ。</p>
+        <ul>
+            <li>プログラミング言語いろいろ(パクり元:Gemini先生)</li>
+        </ul>
+        <table>
+            <tr>
+                <th>言語名</th>
+                <th>得意分野</th>
+                <th>特徴</th>
+            </tr>
+            <tr>
+                <td><b>python</b></td>
+                <td>データ分析、機械学習、Web開発、自動化</td>
+                <td>シンプルで読みやすい文法。豊富なライブラリがあり、多岐にわたる分野で活躍します。</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Webフロントエンド (ブラウザ操作)、Webバックエンド(Node.js)</td>
+                <td>Webサイトに動きをつけたり、ユーザーインターフェースを構築するのに必須です。現在、最も汎用性が高い言語の一つです。</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>大規模システム開発、Androidアプリ開発、エンタープライズ</td>
+                <td>処理速度が速く、安定性に優れます。「一度書けばどこでも動く」という特徴があり、信頼性が求められる分野で使われます。</td>
+            </tr>
+            <tr>
+                <td>C / C++</td>
+                <td>OS、組み込みシステム、ゲーム開発、高性能計算</td>
+                <td>実行速度が非常に速く、ハードウェアに近い低レベルな制御が可能です。処理速度が求められる分野で使われます。</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>Webバックエンド開発 (特にCMS、例: WordPress)</td>
+                <td>サーバーサイドのWeb開発に特化しており、手軽に動的なWebサイトを構築できます。</td>
+            </tr>
+            <!-- <tr>
+                <td>Swift</td>
+                <td>iOS/macOSアプリ開発</td>
+                <td>Apple製品（iPhone, iPad, Mac）向けのネイティブアプリ開発に使われる言語です。安全性が高く、モダンな設計です。</td>
+            </tr> -->
+        </table><br>
+        <p>Pythonは人間が話す英語に近い形で記述できて、初心者が学びやすい言語でありつつ、AI関連の開発やWebサイト制作などでめちゃくちゃ使われている言語なので、コレ一つ覚えれば大抵のことはできる(とはいえ、苦手なことも一応ある)って感じ。</p>
+
+        <h1 id="さっそくpythonを使ってみよう">さっそくpythonを使ってみよう!</h1>
+        <p>と、その前に</p>
+
+        <h2 id="pythonを書くプログラミングをするための道具の紹介">pythonを書く=プログラミングをするための道具の紹介</h2>
+        <ul>
+            <li><strong>Visual Studio Code(ビジュアルスタジオコード：VSCode)</strong>: テキストエディタ</li>
+        </ul>
+        <p>例えば、こんな感じのながーいプログラムコードを書くのは、いくらプログラマーでもめちゃしんどい</p>
+        <p><img src="img/long_code.png" alt="長いプログラムコード" style="width: 80%; margin: auto;"></p>
+        <p>pythonが学びやすい言語だとはいえ、いきなりこんな意味わからんコード(プログラムの文字のこと)を打つのは正直しんどい。なので、コードの入力を助けてくれる便利ツールを使います。長～い文章を書くときに、パソコンがこれから書くことを予測して「これじゃね?」って候補を表示してくれたら便利だよね?そんな感じの予測変換なんかは出てくるけど、VSCode(ブイエスコード)を使うと、そのプログラミング版の機能が使えて超便利。</p>
+        <!-- big -->
+        <p><img class="img_big" src="img/vscode_big.png" alt="VSCodeの画面"></p>
+        <p>①エクスプローラ：ファイルを整理して置くところ。ファイルの位置関係がわかりやすい<br>
+            ②エディター：コードを書くところ<br>
+            ③ターミナル：マイクラで言うところのコマンドを書くところ。何に使うかはのちほど</p>
+        <p>VSコードはこの3つの画面に分かれていて、みんながコードを書くのは <strong>②エディタ</strong> の部分。ここにコードを書いて、右上の実行ボタンを押すと、下の「ターミナル」と言われる部分に結果が表示される。早速コードを打ち込んでみよう！</p>
+
+        <h2 id="pythonファイルの作成">pythonファイルの作成</h2>
+        <p>まずはコードを書くためのpythonファイルを作成する必要がある。pythonファイルはwordのファイルやexcelのファイルと同じで、コードを扱うことができるファイル。ファイル名の後ろに「.py」という拡張子をつけます。<br>
+            今回は「hello.py」というpythonファイルを作成して、そのファイルにコードを書き込んでいくことにしよう。<br>
+            VSCodeの①:エクスプローラの部分を右クリックして、「新しいファイル」をクリックして、hello.pyというファイルを作成してください。</p>
+
+        <h2 id="文字を表示してみよう-hello-world">文字を表示してみよう! Hello World!!</h2>
+        <p>エディタ部分に、このコードを記入してみよう</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>print("Hello World!")
+</code></pre>
+        <p>VSCodeの機能を使ってラクして書いてみよう。priと打ったあとにtabキーを押すと、「これじゃね?」ていうのが出てくるので、クリックまたはtabキーで選択（またはマウスで選択）しよう。これを「コード補完」といって、VSCodeがラクにコードを書けるように候補を出してくれてるので、ありがたく使わせていただこう。</p>
+        <!-- big -->
+        <p><img class="img_big" src="img/helloworld_gif_big.gif" alt="コード補完の様子"></p>
+        <p>書けたと思ったら、右上の <strong>▷ボタン(実行ボタン)</strong> を押してみよう。こんな感じの表示が出ればOK。</p>
+        <!-- big -->
+        <p><img class="img_big" src="img/helloworld_big.png" alt="Hello World!の実行結果"></p>
+        <p>これでみんなは、pythonのコードを書いて、「Hello World!」という文字を表示させる、という処理を実行し、成功させたわけだ。<br>
+            これでみんなもプログラミングマスターだ!さあ、プログラミングの世界に羽ばたこう!!</p>
+
+        <h2 id="なにそれショボw">なにそれ、ショボw</h2>
+        <p>そらそう。文字出すだけで何がおもろいねん。<br>
+            今やったのは、プログラミングの一番ベースとなるところで、最終的にはコードを使ってゲームを動かしたりできるようになるけど、最初はちょっとだけ地味めなことが続くので、がんばって。</p>
+
+        <h1 id="pythonで計算してみよう">pythonで計算してみよう</h1>
+        <p>問題:以下のコードを実行してください</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>print("1 + 2")
+</code></pre>
+        <p>明らかに計算してくれそうなコードだけど、答えはどうなった?<br>
+            1+2は1+2。そのとおり、やったね!</p>
+        <p>って、あかんやん。3になってほしいのよ!<br>
+            ここで、pythonの文字と数字の扱いについて。</p>
+
+        <h2 id="プログラミングデータをいかにして使うか-データ型">プログラミング=データをいかにして使うか: データ型</h2>
+        <p>プログラミングは、<strong>データをいかにしてコネコネするか</strong> といえる。さっきのHelloWorldのやつは、HelloWorldという <strong>文字の</strong>データを使ったわけだけど、今回は1と2という<strong>数字の</strong>データを使って計算したい。<br>
+            プログラミングは様々な種類(=<strong>型</strong>)のデータを扱うから、その型に応じた扱い方をしなくちゃいけない。まな板と包丁では、使う目的も使い方も違うよねって話。<br>
+            pythonのデータ型はたくさんあるけど、今回出てくるのは3種類だけ。</p>
+        <ul>
+            <li>文字列型(string型 / str型)<br>
+                文字列を使うときは、さっきHello Worldでやったみたいに、""(ダブルクオート)で囲う必要がある。<br>
+                さっきデータによって使い方を変えるって言ったけど、実は文字同士で足し算ができるんだけど、文字列の場合は文字同士がくっついて別の文字列になる。</li>
+            <li>整数型(integer型 / int型)<br>
+                整数(小数じゃない数)を扱う型。文字列と違って""で囲う必要がない。数学と一緒で四則計算ができるけど、ちょっと特殊な計算方法もある。</li>
+            <li>辞書型(dictionary型 / dict型)<br>
+                複数のデータを扱うときのやり方のひとつ。それぞれのデータに対して「キー」という検索用の名前をつけて管理する</li>
+        </ul>
+        <p>まとめると</p>
+        <table>
+            <tr>
+                <td>データ型</td>
+                <td>特徴</td>
+            </tr>
+            <tr>
+                <td>文字列型 / string型 / str型</td>
+                <td>文字を扱う<br>"" で囲う<br>足し算すると合体する</td>
+            </tr>
+            <tr>
+                <td>整数型 / int型</td>
+                <td>整数(小数じゃない数)を扱う<br>""で囲わない<br>計算ができる</td>
+            </tr>
+            <tr>
+                <td>辞書型 / dict型</td>
+                <td>複数のデータを、それぞれ名前をつけることで管理できるようにする。</td>
+            </tr>
+        </table>
+        <p>実際に使いながら、データの型とその使い方を見てみよう。</p>
+
+        <h2 id="pythonの四則演算">pythonの四則演算</h2>
+        <p>pythonで四則演算(足し算、引き算、掛け算、割り算)をしてみよう。<br>
+            掛け算・割り算の記号が算数とちょっと違うのと、割り算にいろんな種類があるのが特徴。</p>
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align:center">演算子の記号</th>
+                    <th style="text-align:center">役割</th>
+                    <th style="text-align:left">コード例</th>
+                    <th style="text-align:center">実行結果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:center"><strong>+</strong></td>
+                    <td style="text-align:center">足し算</td>
+                    <td style="text-align:left"><code>print(10 + 5)</code></td>
+                    <td style="text-align:center">15</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>-</strong></td>
+                    <td style="text-align:center">引き算</td>
+                    <td style="text-align:left"><code>print(20 - 7)</code></td>
+                    <td style="text-align:center">13</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>*</strong></td>
+                    <td style="text-align:center">掛け算</td>
+                    <td style="text-align:left"><code>print(4 * 6)</code></td>
+                    <td style="text-align:center">24</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>/</strong></td>
+                    <td style="text-align:center">割り算</td>
+                    <td style="text-align:left"><code>print(15 / 3)</code></td>
+                    <td style="text-align:center">5.0</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>//</strong></td>
+                    <td style="text-align:center">割り算の<strong>商</strong></td>
+                    <td style="text-align:left"><code>print(17 // 5)</code></td>
+                    <td style="text-align:center">3</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>%</strong></td>
+                    <td style="text-align:center">割り算の<strong>余り</strong></td>
+                    <td style="text-align:left"><code>print(17 % 5)</code></td>
+                    <td style="text-align:center">2</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>**</strong></td>
+                    <td style="text-align:center">べき乗</td>
+                    <td style="text-align:left"><code>print(2 ** 3)</code></td>
+                    <td style="text-align:center">8</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1 id="変数について">変数について</h1>
+        <p>例えば、こんなプログラムを作ることを想定してみよう。</p>
+        <blockquote>
+            <p>国語、数学、家庭科、化学、生物、物理、地学、日本史、世界史、音楽、情報、政治・経済、図工、道徳、家庭科、英語のテストの点数を見て、赤点の科目数を数えるプログラム</p>
+        </blockquote>
+        <p>こういうプログラムを作るときに、たとえば<br>
+            80点、50点、62点、91点、80点、23点。。。<br>
+            とかっていう点数を渡されても、どれがどの科目の点数なのかわかんないよね。<br>
+            プログラミングしてる時も同じで、計算したりするデータがなんのデータなのか、 <strong>わかりやすく名前をつけてあげる</strong> と超便利。<br>
+            pythonでは、こんな感じで <strong>=</strong> (イコール)を使ってデータに名前をつけます。</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>kokugo = 80
+suugaku = 50
+kateika = 62
+kagaku = 91
+...
+</code></pre>
+        <p>※プログラミングと算数・数学では、イコールの意味が違う!<br>
+            算数や数学で、イコールというと、「右と左は同じもの」という意味だけど(1+1=2)、プログラミングでは「右のデータを、左として登録するよ!」という意味になる!<br>
+            例えば、</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>kokugo = 80
+</code></pre>
+        <p>とすると、kokugoと80が同じという意味ではなく、「80という数字のデータを,変数『kokugo』として登録するよ!これ以降、kokugoといったら、数字の80のことね!」ていう意味になる。</p>
+
+        <h2 id="変数を使って計算してみよう">変数を使って計算してみよう</h2>
+        <p>変数を登録(宣言)すると、それ以降のコード内でその変数名を使うと、その登録されたデータのことを指すから、例えば、こういうことができる</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>kokugo = 80
+suugaku = 50
+
+print(kokugo + suugaku)
+</code></pre>
+        <p>実行結果:130</p>
+
+        <h2 id="練習問題①-計算してみよう">&lt;練習問題①&gt; 計算してみよう</h2>
+        <p>次の問題を、pythonで解いてみよう</p>
+        <pre data-role="codeBlock" data-info="" class="language-text"><code>国語80点、数学50点、英語が70点として、この三教科の平均点を求めよ
+</code></pre>
+        <details>
+            <summary>解答例</summary>
+            <pre data-role="codeBlock" data-info="python" class="language-python python"><code>kokugo = 80
+suugaku = 50
+eigo = 70
+heikin = (kokugo + suugaku + eigo) / 3
+print(heikin)
+</code></pre>
+        </details>
+
+        <h2 id="練習問題②エラーを起こしてみよう">&lt;練習問題②&gt;エラーを起こしてみよう</h2>
+        <p>次のコードを実行して、どんな結果になるか見てみよう</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>print("リッキー:" + 37 + "歳")
+</code></pre>
+
+        <h2 id="エラーはトモダチ-こわくない">エラーはトモダチ こわくない!</h2>
+        <p>エラーメッセージは、パソコンが壊れたわけでもなんでもなく、<strong>ここ間違っとるんとちゃいます?</strong> っていう、パソコンからのアドバイスが書いてある。いろいろ英語で書いてあるから大変だけど、一番下にエラー内容のまとめが書いてあるから、それを調べるのが一番効率がいい場合が多い。今回の場合はこの部分。</p>
+        <pre data-role="codeBlock" data-info="" class="language-text"><code>Traceback (most recent call last):
+  File "hello.py", line 1, in &lt;module&gt;
+    print("リッキー:" + 37 + "歳")
+          ~~~~~~~~~~~~^~~~
+TypeError: can only concatenate str (not "int") to str
+</code></pre>
+        <p>一番下の <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code> は、「文字列(str)には文字列しかくっつけられないよ(int=数字はダメ)」という意味。</p>
+
+        <h2 id="じゃあどうする">じゃあどうする?</h2>
+        <p>「プログラマーの殆どは、その仕事の殆どの時間をプログラミングではなく、調べることに使う」みたいなことを誰かが言ってたような。調べ方もいろいろあって、</p>
+        <ul>
+            <li>ググる</li>
+            <li>詳しい人に聞く</li>
+            <li>AIに聞く</li>
+            <li>後回しにする(割とマジである話)</li>
+            <li>見なかったことにする(これも、無くはない話w)</li>
+        </ul>
+        <p>プログラミング系の記事は、初心者向けに書かれていないものも多かったりして、正解に行き着くまでが結構大変。「初心者向け」などというワードで検索するといいかも。</p>
+
+        <h2 id="練習問題③エラーを解決しちゃおう">&lt;練習問題③&gt;エラーを解決しちゃおう</h2>
+        <p>さっきのコードで、エラー無く</p>
+        <pre data-role="codeBlock" data-info="" class="language-text"><code>リッキー:37歳
+</code></pre>
+        <p>と出力されるようにしてみよう。</p>
+        <details>
+            <summary>解答例</summary>
+            <p>「37」という数字(=int型)のデータは、「リッキー:」とか「歳」という文字(=str型) のデータとは扱いが違って、数字と文字では足し算できないよ!というエラーが出てる。<br>
+                解決方法の一つとして、数字の37を数字から文字列に変えることができればよさげ。<br>
+                str()という、()の中に入れた数字を文字にしてくれるpythonの機能があるので、それを使おう。</p>
+            <pre data-role="codeBlock" data-info="python" class="language-python python"><code>print("リッキー:" + str(37) + "歳")
+</code></pre>
+        </details>
+
+        <h1 id="辞書型">辞書型</h1>
+        <p>変数を使うとデータに名前をつけて格納できるんだけど、基本１つの変数に１つのデータしか入らない。<br>
+            辞書型は、複数のデータをひとまとまりにして管理する方法の一つで、たとえばゲーム中のキャラクターのステータスを管理するときに、こんなふうに管理することができる。</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>ricky = {
+    "名前": "リッキー",
+    "レベル": 1,
+    "ジョブ": "戦士",
+    "攻撃力": 100,
+    "防御力": 80,
+}
+</code></pre>
+        <p>rickyという変数にいろんなデータが入ってるね。このricky変数から、ほしいデータを持ってくるときはこんな感じ。</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>print(ricky["攻撃力"])
+</code></pre>
+        <p>実行結果:100</p>
+        <p>辞書型を宣言するときは <code>{ }</code> (中括弧)で、データを使うときは <code>[ ]</code>（大括弧）を使うことに注意。<br>
+            試しに、こんな感じのコードを書いて、リッキーとガッキーを戦わせてみよう</p>
+        <pre data-role="codeBlock" data-info="python" class="language-python python"><code>ricky = {
+    "名前": "リッキー",
+    "レベル": 1,
+    "ジョブ": "戦士",
+    "攻撃力": 100,
+    "防御力": 80,
+}
+gacky = {
+    "名前": "ガッキー",
+    "レベル": 1,
+    "ジョブ": "僧侶",
+    "攻撃力": 200,
+    "防御力": 80,
+}
+
+
+print("ガッキーのこうげき！")
+damage = gacky["攻撃力"] - ricky["防御力"]
+print("リッキーに"+ str(damage) + "のダメージ")
+</code></pre>
+
+        <h1 id="おまけ-家の自分のパソコンでpythonを動かしてみよう">おまけ 家の（自分の）パソコンで、pythonを動かしてみよう</h1>
+        <ul>
+            <li><a href="https://prog-8.com/docs/python-env-win">Pythonインストール：windowsの場合</a></li>
+            <li><a href="https://prog-8.com/docs/python-env">Pythonインストール：macの場合</a></li>
+            <li><a href="https://jitera.com/ja/insights/70959">VSCodeのインストール：win / mac</a></li>
+            <li><a href="https://paiza.io/ja/projects/new">インストールしなくてもお試しでpythonを動かせるサイト</a></li>
+        </ul>
+        <p>OSによってバージョンが少し違ったりする場合があるので、もしわからないことがあったらリッキーたちに聞きにきてください。</p>
+
+        <div id="page-references" hidden>
+        <a href="https://udemy.benesse.co.jp/development/system/visual-studio-code.html">VSCodeの使い方</a>
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

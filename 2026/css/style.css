@@ -1,0 +1,1534 @@
+.uneditable {
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: #F5F5F5;
+    /* 薄い赤でコピー禁止を明示 */
+    border-left: 4px solid #e74c3c;
+    /* 視覚的に強調 */
+    padding: 0.5em;
+    display: block;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+    color: #333;
+    background: 0 0;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.4;
+    -moz-tab-size: 8;
+    -o-tab-size: 8;
+    tab-size: 8;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+pre[class*=language-] {
+    padding: .8em;
+    overflow: auto;
+    border-radius: 3px;
+    background: #f5f5f5
+}
+
+:not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+    background: #f5f5f5
+}
+
+.token.blockquote,
+.token.comment {
+    color: #969896
+}
+
+.token.cdata {
+    color: #183691
+}
+
+.token.doctype,
+.token.macro.property,
+.token.punctuation,
+.token.variable {
+    color: #333
+}
+
+.token.builtin,
+.token.important,
+.token.keyword,
+.token.operator,
+.token.rule {
+    color: #a71d5d
+}
+
+.token.attr-value,
+.token.regex,
+.token.string,
+.token.url {
+    color: #183691
+}
+
+.token.atrule,
+.token.boolean,
+.token.code,
+.token.command,
+.token.constant,
+.token.entity,
+.token.number,
+.token.property,
+.token.symbol {
+    color: #0086b3
+}
+
+.token.prolog,
+.token.selector,
+.token.tag {
+    color: #63a35c
+}
+
+.token.attr-name,
+.token.class,
+.token.class-name,
+.token.function,
+.token.id,
+.token.namespace,
+.token.pseudo-class,
+.token.pseudo-element,
+.token.url-reference .token.variable {
+    color: #795da3
+}
+
+.token.entity {
+    cursor: help
+}
+
+.token.title,
+.token.title .token.punctuation {
+    font-weight: 700;
+    color: #1d3e81
+}
+
+.token.list {
+    color: #ed6a43
+}
+
+.token.inserted {
+    background-color: #eaffea;
+    color: #55a532
+}
+
+.token.deleted {
+    background-color: #ffecec;
+    color: #bd2c00
+}
+
+.token.bold {
+    font-weight: 700
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.language-json .token.property {
+    color: #183691
+}
+
+.language-markup .token.tag .token.punctuation {
+    color: #333
+}
+
+.language-css .token.function,
+code.language-css {
+    color: #0086b3
+}
+
+.language-yaml .token.atrule {
+    color: #63a35c
+}
+
+code.language-yaml {
+    color: #183691
+}
+
+.language-ruby .token.function {
+    color: #333
+}
+
+.language-markdown .token.url {
+    color: #795da3
+}
+
+.language-makefile .token.symbol {
+    color: #795da3
+}
+
+.language-makefile .token.variable {
+    color: #183691
+}
+
+.language-makefile .token.builtin {
+    color: #0086b3
+}
+
+.language-bash .token.keyword {
+    color: #0086b3
+}
+
+pre[data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em
+}
+
+pre[data-line] .line-highlight-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: block;
+    width: 100%
+}
+
+pre[data-line] .line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1em;
+    background: hsla(24, 20%, 50%, .08);
+    background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre
+}
+
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: hsla(24, 20%, 50%, .4);
+    color: #f4f1ef;
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    vertical-align: .3em;
+    border-radius: 999px;
+    text-shadow: none;
+    box-shadow: 0 1px #fff
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em
+}
+
+html body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Yu Gothic", Meiryo, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    overflow: initial;
+    box-sizing: border-box;
+    word-wrap: break-word
+}
+
+html body>:first-child {
+    margin-top: 0
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 16px;
+    color: #000
+}
+
+html body h1 {
+    font-size: 2.25em;
+    font-weight: 300;
+    padding-bottom: .3em
+}
+
+html body h2 {
+    font-size: 1.75em;
+    font-weight: 400;
+    padding-bottom: .3em
+}
+
+html body h3 {
+    font-size: 1.5em;
+    font-weight: 500
+}
+
+html body h4 {
+    font-size: 1.25em;
+    font-weight: 600
+}
+
+html body h5 {
+    font-size: 1.1em;
+    font-weight: 600
+}
+
+html body h6 {
+    font-size: 1em;
+    font-weight: 600
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+    font-weight: 600
+}
+
+html body h5 {
+    font-size: 1em
+}
+
+html body h6 {
+    color: #5c5c5c
+}
+
+html body strong {
+    color: #000
+}
+
+html body del {
+    color: #5c5c5c
+}
+
+html body a:not([href]) {
+    color: inherit;
+    text-decoration: none
+}
+
+html body a {
+    color: #08c;
+    text-decoration: none
+}
+
+html body a:hover {
+    color: #00a3f5;
+    text-decoration: none
+}
+
+html body img {
+    max-width: 100%
+}
+
+html body>p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: break-word
+}
+
+html body>ol,
+html body>ul {
+    margin-bottom: 16px
+}
+
+html body ol,
+html body ul {
+    padding-left: 2em
+}
+
+html body ol.no-list,
+html body ul.no-list {
+    padding: 0;
+    list-style-type: none
+}
+
+html body ol ol,
+html body ol ul,
+html body ul ol,
+html body ul ul {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+html body li {
+    margin-bottom: 0
+}
+
+html body li.task-list-item {
+    list-style: none
+}
+
+html body li>p {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+html body .task-list-item-checkbox {
+    margin: 0 .2em .25em -1.8em;
+    vertical-align: middle
+}
+
+html body .task-list-item-checkbox:hover {
+    cursor: pointer
+}
+
+html body blockquote {
+    margin: 16px 0;
+    font-size: inherit;
+    padding: 0 15px;
+    color: #5c5c5c;
+    background-color: #f0f0f0;
+    border-left: 4px solid #d6d6d6
+}
+
+html body blockquote>:first-child {
+    margin-top: 0
+}
+
+html body blockquote>:last-child {
+    margin-bottom: 0
+}
+
+html body hr {
+    height: 4px;
+    margin: 32px 0;
+    background-color: #d6d6d6;
+    border: 0 none
+}
+
+html body table {
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all
+}
+
+html body table th {
+    font-weight: 700;
+    color: #000
+}
+
+html body table td,
+html body table th {
+    border: 1px solid #d6d6d6;
+    padding: 6px 13px
+}
+
+html body dl {
+    padding: 0
+}
+
+html body dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 700
+}
+
+html body dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px
+}
+
+html body code {
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: .85em;
+    color: #000;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: .2em 0
+}
+
+html body code::after,
+html body code::before {
+    letter-spacing: -.2em;
+    content: '\00a0'
+}
+
+html body pre>code {
+    padding: 0;
+    margin: 0;
+    word-break: normal;
+    white-space: pre;
+    background: 0 0;
+    border: 0
+}
+
+html body .highlight {
+    margin-bottom: 16px
+}
+
+html body .highlight pre,
+html body pre {
+    padding: 1em;
+    overflow: auto;
+    line-height: 1.45;
+    border: #d6d6d6;
+    border-radius: 3px
+}
+
+html body .highlight pre {
+    margin-bottom: 0;
+    word-break: normal
+}
+
+html body pre code,
+html body pre tt {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0
+}
+
+html body pre code:after,
+html body pre code:before,
+html body pre tt:after,
+html body pre tt:before {
+    content: normal
+}
+
+html body blockquote,
+html body dl,
+html body ol,
+html body p,
+html body pre,
+html body ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+html body kbd {
+    color: #000;
+    border: 1px solid #d6d6d6;
+    border-bottom: 2px solid #c7c7c7;
+    padding: 2px 4px;
+    background-color: #f0f0f0;
+    border-radius: 3px
+}
+
+@media print {
+    html body {
+        background-color: #fff
+    }
+
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5,
+    html body h6 {
+        color: #000;
+        page-break-after: avoid
+    }
+
+    html body blockquote {
+        color: #5c5c5c
+    }
+
+    html body pre {
+        page-break-inside: avoid
+    }
+
+    html body table {
+        display: table
+    }
+
+    html body img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%
+    }
+
+    html body code,
+    html body pre {
+        word-wrap: break-word;
+        white-space: pre
+    }
+}
+
+.markdown-preview {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.markdown-preview ul {
+    list-style: disc
+}
+
+.markdown-preview ul ul {
+    list-style: circle
+}
+
+.markdown-preview ul ul ul {
+    list-style: square
+}
+
+.markdown-preview ol {
+    list-style: decimal
+}
+
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+    list-style-type: lower-roman
+}
+
+.markdown-preview ol ol ol,
+.markdown-preview ol ul ol,
+.markdown-preview ul ol ol,
+.markdown-preview ul ul ol {
+    list-style-type: lower-alpha
+}
+
+/* 旧教材の章立て用リストを、Discord Bot章と同じ見出し表示にする。 */
+.markdown-preview .legacy-section-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.markdown-preview .legacy-section-item {
+    list-style: none;
+}
+
+.markdown-preview .legacy-section-item::marker {
+    content: "";
+}
+
+html body .legacy-section-heading {
+    font-size: 1.75em;
+    font-weight: 600;
+    padding-bottom: .3em;
+}
+
+.markdown-preview .newpage,
+.markdown-preview .pagebreak {
+    page-break-before: always
+}
+
+.markdown-preview pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber
+}
+
+.markdown-preview pre.line-numbers>code {
+    position: relative
+}
+
+.markdown-preview pre.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 1em;
+    font-size: 100%;
+    left: 0;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.markdown-preview pre.line-numbers .line-numbers-rows>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber
+}
+
+.markdown-preview pre.line-numbers .line-numbers-rows>span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: .8em;
+    text-align: right
+}
+
+.markdown-preview .mathjax-exps .MathJax_Display {
+    text-align: center !important
+}
+
+.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group {
+    display: none
+}
+
+.markdown-preview:not([data-for=preview]) .code-chunk .status {
+    display: none
+}
+
+.markdown-preview:not([data-for=preview]) .code-chunk .output-div {
+    margin-bottom: 16px
+}
+
+.markdown-preview .md-toc {
+    padding: 0
+}
+
+.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+    display: inline;
+    padding: .25rem 0
+}
+
+.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+    display: inline
+}
+
+.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+    font-weight: 800
+}
+
+.scrollbar-style::-webkit-scrollbar {
+    width: 8px
+}
+
+.scrollbar-style::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent
+}
+
+.scrollbar-style::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(150, 150, 150, .66);
+    border: 4px solid rgba(150, 150, 150, .66);
+    background-clip: content-box
+}
+
+html body[for=html-export]:not([data-presentation-mode]) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: auto
+}
+
+html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+    position: relative;
+    top: 100px;
+    min-height: 100vh
+}
+
+@media screen and (min-width:914px) {
+    html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        padding: 2em calc(50% - 457px + 2em)
+    }
+}
+
+@media screen and (max-width:914px) {
+    html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        padding: 2em
+    }
+}
+
+@media screen and (max-width:450px) {
+    html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        font-size: 14px !important;
+        padding: 1em
+    }
+}
+
+@media print {
+    html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+        display: none
+    }
+}
+
+html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+    /* position: fixed; */
+    bottom: 8px;
+    left: 8px;
+    font-size: 28px;
+    cursor: pointer;
+    color: inherit;
+    z-index: 99;
+    width: 32px;
+    text-align: center;
+    opacity: .4
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+    opacity: 1
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 32px 0 48px 0;
+    font-size: 14px;
+    box-shadow: 0 0 4px rgba(150, 150, 150, .33);
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: inherit
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
+    width: 8px
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(150, 150, 150, .66);
+    border: 4px solid rgba(150, 150, 150, .66);
+    background-clip: content-box
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+    text-decoration: none
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+    padding: 0 16px
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link {
+    display: inline;
+    padding: .25rem 0
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p {
+    display: inline
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+    font-weight: 800
+}
+
+html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+    left: 300px;
+    width: calc(100% - 300px);
+    padding: 2em calc(50% - 457px - 300px / 2);
+    margin: 0;
+    box-sizing: border-box
+}
+
+@media screen and (max-width:1274px) {
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+        padding: 2em
+    }
+}
+
+@media screen and (max-width:450px) {
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+        width: 100%
+    }
+}
+
+html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+    display: none
+}
+
+/* ヘッダー */
+header {
+    width: 100%;
+    height: 80px;
+    background: rgb(238, 248, 178);
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    /* flexboxを作る */
+    display: flex;
+    /* 上下中央に揃える */
+    align-items: center;
+    /* 両端に配置 */
+    justify-content: space-between;
+
+    position: fixed;
+    /* 常にヘッダーが上に表示されるようにする */
+    z-index: 1000;
+}
+
+header ul {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin: 10px 10px;
+    align-items: center;
+}
+
+header ul li a {
+    align-items: center;
+}
+
+header ul li a img {
+    height: 40px;
+    align-items: center;
+}
+
+
+.header_img {
+    height: 40px;
+}
+
+/* documentボタンのプルダウン（ドキュメント・ページごとの参考サイト） */
+header ul li.ref-menu-item {
+    position: relative;
+}
+
+.ref-menu-button {
+    display: block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.ref-menu-button img {
+    display: block;
+    height: 40px;
+}
+
+.ref-menu-button:focus-visible {
+    outline: 3px solid #f0a64a;
+    outline-offset: 3px;
+}
+
+.ref-menu-panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: max-content;
+    min-width: 220px;
+    max-width: min(340px, calc(100vw - 32px));
+    padding: 10px 0;
+    border: 1px solid #e2e8c9;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(44, 73, 35, .16);
+}
+
+.ref-menu-panel[hidden] {
+    display: none;
+}
+
+.ref-menu-group + .ref-menu-group {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #eef2df;
+}
+
+.ref-menu-label {
+    margin: 0;
+    padding: 4px 16px;
+    color: #6b7768;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ref-menu-panel ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li.ref-menu-item .ref-menu-panel li {
+    margin: 0;
+}
+
+.ref-menu-panel a {
+    display: block;
+    padding: 8px 16px;
+    color: #527000;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: normal;
+}
+
+.ref-menu-panel a:hover,
+.ref-menu-panel a:focus-visible {
+    background: #f1f7ce;
+    color: #304700;
+    outline: none;
+}
+
+/* スマホ幅ではヘッダーの真下に画面幅いっぱいで表示する */
+@media screen and (max-width: 600px) {
+    .ref-menu-panel {
+        position: fixed;
+        top: 76px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+        max-width: none;
+    }
+}
+
+@media print {
+    .ref-menu-panel {
+        display: none !important;
+    }
+}
+
+/* 教材画像はDiscord Bot章と同じ3段階の表示幅に統一する。 */
+.markdown-preview p > img {
+    display: block;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 旧教材のクラス未指定画像は、既存の縦横比と小さい画像の原寸を保ちつつ
+   img_big相当の幅を上限にする。 */
+.markdown-preview img:not(.img_top):not(.img_big):not(.img_small) {
+    width: auto;
+    max-width: 70%;
+    height: auto;
+}
+
+.img_top {
+    width: 90%;
+}
+
+.img_big {
+    width: 70%;
+}
+
+.img_small {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .markdown-preview img:not(.img_top):not(.img_big):not(.img_small),
+    .img_top,
+    .img_big,
+    .img_small {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+.copy-btn {
+    position: absolute;
+    /* 親要素（pre）に対して絶対配置 */
+    top: 0.5em;
+    /* 上端からの距離 */
+    right: 0.5em;
+    /* 右端からの距離 */
+    background-color: #f0f0f0;
+    /* ボタンの背景色 */
+    border: 1px solid #d6d6d6;
+    /* ボタンの境界線 */
+    border-radius: 3px;
+    /* 角を丸くする */
+    padding: 0.3em 0.6em;
+    /* 内側の余白 */
+    cursor: pointer;
+    /* マウスオーバー時にカーソルをポインターにする */
+    font-size: 0.8em;
+    /* フォントサイズを調整 */
+    color: #333;
+    /* 文字色 */
+}
+
+
+/* pre要素を基準点にする */
+pre[data-role="codeBlock"] {
+    position: relative;
+    /* 子要素の絶対配置の基準となるように設定 */
+    padding-top: 2.5em;
+    /* ボタンのスペースを確保するために上部のパディングを増やす */
+}
+
+
+/* ===== Pythonコードブロック用ダークモードスタイル (修正版) ===== */
+
+/* コードブロック全体の背景と基本文字色 */
+pre.language-python,
+pre.language-python code {
+    background-color: #2d2d2d !important; /* 暗い背景色 */
+    color: #f8f8f2 !important;            /* 明るい基本文字色 */
+    text-shadow: none !important;         /* 文字の影を無効化 */
+}
+
+/* Pythonコードブロック内の各種トークン（構文要素）の色を調整 */
+pre.language-python .token.comment,
+pre.language-python .token.prolog,
+pre.language-python .token.doctype,
+pre.language-python .token.cdata {
+    color: #8292a2 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.punctuation {
+    color: #f8f8f2 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.property,
+pre.language-python .token.tag,
+pre.language-python .token.constant,
+pre.language-python .token.symbol,
+pre.language-python .token.deleted {
+    color: #ff79c6 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.boolean,
+pre.language-python .token.number {
+    color: #bd93f9 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.selector,
+pre.language-python .token.attr-name,
+pre.language-python .token.string,
+pre.language-python .token.char,
+pre.language-python .token.builtin,
+pre.language-python .token.inserted {
+    color: #50fa7b !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.operator,
+pre.language-python .token.entity,
+pre.language-python .token.url,
+pre.language-python .language-css .token.string,
+pre.language-python .style .token.string {
+    color: #f8f8f2 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.atrule,
+pre.language-python .token.attr-value,
+pre.language-python .token.keyword {
+    color: #ff79c6 !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.function,
+pre.language-python .token.class-name {
+    color: #8be9fd !important;
+    text-shadow: none !important;
+}
+
+pre.language-python .token.regex,
+pre.language-python .token.important,
+pre.language-python .token.variable {
+    color: #f1fa8c !important;
+    text-shadow: none !important;
+}
+
+/* コピーボタンのスタイルもダークモードに合わせて調整 */
+pre.language-python .copy-btn {
+    background-color: #5066f1;
+    border-color: #6272a4;
+    color: #f8f8f2;
+}
+/* コードブロック内の演算子から灰色の背景を削除 */
+.token.operator {
+    background-color: transparent !important;
+    text-shadow: none !important;
+}
+
+/* ===== ページ内検索付きハンバーガーメニュー（C案） ===== */
+
+:root {
+    --menu-ink: #17212b;
+    --menu-muted: #667085;
+    --menu-green: #397548;
+    --menu-line: #dce5c5;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.markdown-preview h1[id],
+.markdown-preview h2[id] {
+    scroll-margin-top: 104px;
+}
+
+#header .page-menu-item {
+    margin-left: 4px;
+}
+
+.page-menu-button {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    border: 1px solid rgba(57, 117, 72, .24);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .75);
+    color: var(--menu-ink);
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.page-menu-button:hover {
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(44, 73, 35, .12);
+    transform: translateY(-1px);
+}
+
+.page-menu-button:focus-visible,
+.page-menu-close:focus-visible,
+.page-menu-search:focus-visible,
+.page-menu-link:focus-visible {
+    outline: 3px solid #f0a64a;
+    outline-offset: 3px;
+}
+
+.page-menu-button span {
+    width: 22px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.page-menu-button[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.page-menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.page-menu-button[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.page-menu-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+    border: 0;
+    background: rgba(18, 28, 22, .14);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+.page-menu-panel {
+    position: fixed;
+    top: 72px;
+    right: 24px;
+    z-index: 1100;
+    width: min(480px, calc(100vw - 32px));
+    max-height: calc(100dvh - 88px);
+    box-sizing: border-box;
+    padding: 22px;
+    border: 1px solid #dce5d2;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgba(22, 45, 28, .2);
+    color: var(--menu-ink);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+
+.page-menu-panel[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+body.menu-open {
+    overflow: hidden !important;
+}
+
+body.menu-open .page-menu-scrim {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.page-menu-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.page-menu-kicker {
+    margin: 0 0 4px;
+    color: var(--menu-green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.page-menu-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.page-menu-close {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 50%;
+    background: #edf1e6;
+    color: var(--menu-ink);
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.page-menu-search-wrap {
+    position: relative;
+    display: block;
+    margin: 18px 0 10px;
+}
+
+.page-menu-search-wrap::before {
+    content: "⌕";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    color: var(--menu-muted);
+    font-size: 24px;
+    transform: translateY(-54%);
+}
+
+.page-menu-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 14px 11px 42px;
+    border: 1px solid #d7ded0;
+    border-radius: 12px;
+    background: #fff;
+    font: inherit;
+}
+
+.page-menu-body {
+    max-height: calc(100dvh - 220px);
+    overflow-y: auto;
+}
+
+.page-menu-list,
+.page-menu-sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-menu-group {
+    border-bottom: 1px solid #edf0e8;
+}
+
+.page-menu-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-menu-link.is-active {
+    color: var(--menu-green);
+    font-weight: 800;
+}
+
+.page-menu-group > .page-menu-link {
+    display: block;
+    padding: 10px 8px;
+    font-weight: 700;
+}
+
+.page-menu-sublist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 8px 10px;
+}
+
+.page-menu-sublist .page-menu-link {
+    display: block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: #f1f5ea;
+    color: #596353;
+    font-size: 12px;
+}
+
+.page-menu-empty {
+    display: none;
+    padding: 28px 8px;
+    color: var(--menu-muted);
+    text-align: center;
+}
+
+.page-menu-empty.is-visible {
+    display: block;
+}
+
+@media (max-width: 850px) {
+    #header {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #header .page-menu-item {
+        margin-right: 0;
+    }
+
+    .page-menu-button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .page-menu-panel {
+        top: 76px;
+        right: 16px;
+    }
+}
+
+@media print {
+    .page-menu-item,
+    .page-menu-panel,
+    .page-menu-scrim {
+        display: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .page-menu-panel,
+    .page-menu-scrim,
+    .page-menu-button,
+    .page-menu-button span {
+        transition: none !important;
+    }
+}
+
+/* 教材共通の見出しデザイン：h1は大きなカード、h2は小さなタブで階層を示す。 */
+html body .markdown-preview h1 {
+    position: relative;
+    margin-top: 2.35em;
+    padding: 0.7em 0.85em 0.7em 1em;
+    overflow: hidden;
+    border: 2px solid #0b7f79;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e4f8f5 0%, #f4fcfb 100%);
+    color: #075c58;
+    font-size: 2em;
+    line-height: 1.35;
+}
+
+html body .markdown-preview h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.35em;
+    height: 100%;
+    background: #f0a12d;
+}
+
+html body .markdown-preview h2 {
+    display: table;
+    margin-top: 1.75em;
+    padding: 0.4em 0.8em;
+    border-radius: 0 999px 999px 0;
+    background: #fff1d8;
+    color: #70460a;
+    font-size: 1.4em;
+    line-height: 1.4;
+    box-shadow: inset 5px 0 0 #f0a12d;
+}
+
+html body .markdown-preview h2 code {
+    color: inherit;
+}
+
+@media screen and (max-width: 450px) {
+    html body .markdown-preview h1 {
+        font-size: 1.65em;
+    }
+
+    html body .markdown-preview h2 {
+        font-size: 1.25em;
+    }
+}
+
+/* maintitle IDを持つh1はページタイトルとして、章見出しとは別の見た目にする。 */
+html body .markdown-preview > h1#maintitle {
+    position: relative;
+    margin: 1.1em 0 1.5em;
+    padding: 1.15em 0.9em 0.75em 1.35em;
+    overflow: visible;
+    border: 0;
+    border-radius: 0 14px 14px 0;
+    background: #eef9f7;
+    color: #173b39;
+    font-size: 2.3em;
+    line-height: 1.4;
+    box-shadow: inset 14px 0 0 #075c58;
+}
+
+html body .markdown-preview > h1#maintitle::after {
+    content: none;
+}
+
+@media screen and (max-width: 450px) {
+    html body .markdown-preview > h1#maintitle {
+        padding: 1.15em 0.7em 0.75em 1.15em;
+        font-size: 1.8em;
+    }
+}
