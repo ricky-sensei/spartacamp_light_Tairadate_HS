@@ -1008,7 +1008,10 @@ header ul li.ref-menu-item .ref-menu-panel li {
 .markdown-preview p > img {
     display: block;
     height: auto;
+    margin-top: 1.5em;
     margin-right: auto;
+    margin-bottom: 1.5em;
+    /* 画像の前後の文章との間に余白を取る */
     margin-left: auto;
 }
 
@@ -1072,6 +1075,9 @@ pre[data-role="codeBlock"] {
     /* 子要素の絶対配置の基準となるように設定 */
     padding-top: 2.5em;
     /* ボタンのスペースを確保するために上部のパディングを増やす */
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    /* コードブロックの前後の文章との間に余白を取る */
 }
 
 
