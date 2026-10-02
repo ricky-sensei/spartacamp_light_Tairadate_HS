@@ -9,3 +9,5 @@ __pycache__/
 # AI エージェント設定
 AGENTS.md
 CLAUDE.md
+.vercel
+.env*
