@@ -125,3 +125,31 @@ body[for="html-export"] .markdown-preview > h2 {
         display: none;
     }
 }
+
+/* ヘッダー（#pagetop）の直後に置いたトップ画像。本文内のimg_topと同じく本文幅の90%で中央に表示し、
+   固定ヘッダー（高さ80px）に隠れないよう、本文と同じ100pxだけ下げる。 */
+html body[for="html-export"] > .img_top {
+    display: block;
+    width: calc((100% - 4em) * 0.9);
+    max-width: calc((914px - 4em) * 0.9);
+    height: auto;
+    margin: calc(100px + 1.5em) auto 1.5em;
+}
+
+/* トップ画像で下げた分、本文の100pxのずらしは不要にする */
+html body[for="html-export"]:not([data-presentation-mode]) > .img_top ~ .markdown-preview {
+    top: 0;
+}
+
+@media screen and (max-width: 600px) {
+    html body[for="html-export"] > .img_top {
+        width: calc(100% - 4em);
+        max-width: none;
+    }
+}
+
+/* トップ画像の上の余白がbodyの外へはみ出し（マージンの相殺）、ヘッダーまで下がらないよう、
+   ヘッダーを画面の一番上に固定する */
+#pagetop > header {
+    top: 0;
+}

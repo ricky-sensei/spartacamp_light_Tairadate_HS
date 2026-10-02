@@ -10,7 +10,7 @@ const pageReferences = Array.from(document.querySelectorAll("#page-references a"
 
 if (header) header.innerHTML = `
       <header id="header">
-      <a href="${headerBasePath}index.html"><img class="header_img" src="${headerBasePath}img/header_img.svg" alt=""></a>
+      <a href="${headerBasePath}index.html"><img class="header_img" src="${headerBasePath}img/header_img_spartacamp_lite.png" alt=""></a>
       <ul>
             <li><a href="${headerBasePath}index.html"><img srcset="${headerBasePath}img/header_home_responsive.svg 768w, ${headerBasePath}img/header_home.svg 1200w" src="${headerBasePath}img/header_home.svg" alt="home"></a></li>
             <li><a href="#pagetop"><img srcset="${headerBasePath}img/header_pagetop_responsive.svg 768w, ${headerBasePath}img/header_pagetop.svg 1200w" src="${headerBasePath}img/header_pagetop.svg" alt=""></a></li>
