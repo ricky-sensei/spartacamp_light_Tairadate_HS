@@ -862,7 +862,7 @@ html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-
 header {
     width: 100%;
     height: 80px;
-    background: rgb(238, 248, 178);
+    background: #d8f0d2;
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
@@ -971,6 +971,8 @@ header ul li.ref-menu-item .ref-menu-panel li {
 
 .ref-menu-panel a {
     display: block;
+    /* 見出し（ref-menu-label）より右にずらし、インデントして見せる */
+    margin-left: 12px;
     padding: 8px 16px;
     color: #527000;
     font-size: 14px;

@@ -83,7 +83,10 @@ MarkdownからHTMLへ変換・編集するときは、各imgタグが参照し�
 img/pyxel_top.png   -> <img class="img_top" src="img/pyxel_top.png" ...>
 img/pyxel_big.png   -> <img class="img_big" src="img/pyxel_big.png" ...>
 img/pyxel_small.png -> <img class="img_small" src="img/pyxel_small.png" ...>
+img/error_small.svg -> <img class="img_small" src="img/error_small.svg" ...>
 ```
+
+画像はPNGとSVGのどちらでもよく、接尾辞とclassの対応は拡張子にかかわらず同じ。
 
 画像直前のコメントとファイル名の接尾辞が異なる場合は、ファイル名の接尾辞を優先し、不一致があることを報告する。
 
@@ -91,7 +94,7 @@ img/pyxel_small.png -> <img class="img_small" src="img/pyxel_small.png" ...>
 
 ヘッダー右側の「document」ボタンを押すと、参考サイトのプルダウンが開く。
 
-- 全ページ共通のドキュメントは Python 公式ドキュメントのみ。`js/script.js` の `commonReferences` で設定されているので、HTML作成時に追加の作業はいらない。
+- 全ページ共通のドキュメントは Python 公式ドキュメントと pyxel公式github の2つ。`js/script.js` の `commonReferences` で設定されているので、HTML作成時に追加の作業はいらない。
 - そのページだけの参考サイトは、Markdownの末尾などに次のブロックを書く。本文には表示されず、プルダウンの「このページの参考サイト」に表示される。HTML作成時に、Markdownに書かれていない参考サイトを勝手に追加しない。
 
 ```html
@@ -101,11 +104,6 @@ img/pyxel_small.png -> <img class="img_small" src="img/pyxel_small.png" ...>
 </div>
 ```
 
-- Pyxelを使うページでは、必要に応じてPyxelのドキュメントを参考サイトに入れる。
-
-```html
-<a href="https://github.com/kitao/pyxel/blob/main/README.md">Pyxel 公式ドキュメント</a>
-```
 
 - `id="page-references"` と `hidden` は変えない。1ページに1つだけ書く。
 - リンクは `<a href="URL">表示名</a>` を1行に1つ書く。Markdownのリンク記法（`[表示名](URL)`）は使わない。
